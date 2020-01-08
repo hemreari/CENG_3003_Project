@@ -35,6 +35,7 @@ func main() {
 	}
 
 	reader := bufio.NewReader(os.Stdin)
+
 	for {
 		fmt.Print("Enter Name: ")
 		nameInputByte, _, err := reader.ReadLine()
@@ -43,7 +44,6 @@ func main() {
 		}
 
 		nameInput := string(nameInputByte)
-
 		userMail := mailMap[nameInput]
 
 		if userMail == "" {
